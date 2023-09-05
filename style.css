@@ -4,3 +4,107 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-color: #323238;
+  --bg-dark: #222;
+  --bg-icons: #E1E1E6;
+  --bg-icons-active: #02799d;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  position: relative;
+
+}
+
+.app {
+  margin: auto;
+  padding: 19.6rem 0 18.8rem;
+  max-width: 82rem;
+  max-height: 72rem;
+}
+
+.toggle-btn {
+  padding: 2rem;
+  font-size: 3.2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color .5s;
+}
+
+.toggle-btn:hover {
+  color: var(--bg-icons-active);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contain {
+  max-width: 32rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.timer {
+  font-size: 12.6rem;
+  font-weight: 500;
+  display: flex;
+  color: var(--font-color);
+}
+
+.controller {
+  display: flex;
+  gap: 4rem;
+}
+
+.controller button {
+  border: none;
+  font-size: 4.8rem;
+  background-color: transparent;
+  color: var(--font-color);
+  cursor: pointer;
+  transition: color .5s;
+}
+
+.controller button:hover {
+  color: var(--bg-icons-active);
+}
+
+.container-sounds {
+  display: grid;
+  grid-template-columns: 15.2rem 15.2rem;
+  grid-template-rows: 13.8rem 13.8rem;
+  gap: 3.2rem;
+}
+
+.card {
+  border-radius: 2rem;
+  border: none;
+  font-size: 5.2rem;
+  background-color: var(--bg-icons);
+  color: var(--font-color);
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.card:focus {
+  background-color: var(--bg-icons-active);
+  color: #fff;
+}
+
+@media (max-width: 56rem) {
+  .container {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
