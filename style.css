@@ -7,17 +7,16 @@
 :root {
   --font-color: #323238;
   --bg-dark: #222;
-  --bg-icons: #E1E1E6;
+  --bg-icons: #e1e1e6;
   --bg-icons-active: #02799d;
 
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   position: relative;
-
 }
 
 .app {
@@ -36,7 +35,7 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .toggle-btn:hover {
@@ -73,7 +72,7 @@ body {
   background-color: transparent;
   color: var(--font-color);
   cursor: pointer;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .controller button:hover {
@@ -107,4 +106,27 @@ body {
     flex-direction: column;
     gap: 5rem;
   }
+}
+
+html.dark .ph-moon,
+html:not(.dark) .ph-sun {
+  display: none;
+}
+
+html.dark,
+.timer.dark,
+.controller button.dark,
+.toggle-btn.dark {
+  background: var(--bg-dark);
+  color: var(--bg-icons);
+}
+
+.controller button.dark:hover,
+.toggle-btn.dark:hover {
+  color: var(--bg-icons-active);
+}
+
+.controller.running .ph-stop-circle,
+.controller:not(.running) .ph-pause-circle {
+  display: none;
 }
