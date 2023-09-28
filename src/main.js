@@ -28,3 +28,19 @@ toggleMode
 //   isDark: false,
 // }
 
+const controllerIsRunning = document.querySelector(".controller")
+
+const btnPlay = document.querySelector("#btn-play")
+
+const btnPause = document.querySelector("#btn-pause")
+
+const btnStop = document.querySelector("#btn-stop")
+
+
+btnPlay.addEventListener("click", () => {
+  controllerIsRunning.classList.add("running")
+})
+
+btnStop.addEventListener("click", () => {
+  controllerIsRunning.classList.remove("running")
+})
