@@ -126,7 +126,7 @@ html.dark,
   color: var(--bg-icons-active);
 }
 
-.controller.running .ph-stop-circle,
+.controller.running  .ph-play-circle,
 .controller:not(.running) .ph-pause-circle {
   display: none;
 }
